@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">RegistrationScreen</string>
+    <string name="pick">PickImage</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="Title">Hooper</string>
+    <string-array name="Designation">
+        <item>--select--</item>
+        <item>Junior Software Engineer</item>
+        <item>Senior Software Engineer</item>
+        <item>Manager</item>
+        <item>HR</item>
+    </string-array>
+</resources>

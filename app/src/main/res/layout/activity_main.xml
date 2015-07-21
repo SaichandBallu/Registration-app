@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/login"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:elevation="4dp"
+        android:background="@color/ColorPrimary">
+
+        <TextView
+            android:id="@+id/customTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:text="Hooper"
+            android:textSize="25dp"/>
+    </android.support.v7.widget.Toolbar>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_style"
+        android:layout_marginBottom="70dp"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:id="@+id/hr"
+        android:textColor="@color/white"
+        android:text="HR"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_style"
+        android:layout_marginBottom="70dp"
+        android:layout_gravity="center"
+        android:id="@+id/checkin"
+        android:textColor="@color/white"
+        android:text="Check In"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_style"
+        android:layout_marginBottom="70dp"
+        android:layout_gravity="center"
+        android:id="@+id/checkout"
+        android:textColor="@color/white"
+        android:text="Check Out"/>
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_style"
+        android:layout_gravity="center"
+        android:id="@+id/register"
+        android:textColor="@color/white"
+        android:text="Register"/>
+
+</LinearLayout>
