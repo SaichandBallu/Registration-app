@@ -1,6 +1,7 @@
 package com.hooper.registrationscreen.interactors;
 
 import android.graphics.drawable.GradientDrawable;
+import android.util.Log;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
@@ -28,7 +29,11 @@ public class DateAttendanceInteractor {
         TableRow tableRow = new TableRow(dateAttendanceActivity);
         TextView textView;
 
-        if(str== DatabaseHelper.ERR_NO_REC_FOUND||str==null) {
+        Log.d("MANUAL CHECKING","");
+        Log.d("\nERR_NO_REC_FOUND :\n",DatabaseHelper.ERR_NO_REC_FOUND);
+        Log.d("\nSTRING_PASSED :\n",str);
+
+        if(str.equals(DatabaseHelper.ERR_NO_REC_FOUND) ||str==null) {
 
             textView=new TextView(dateAttendanceActivity);
             textView.setText("NO RECORDS FOUND.");
@@ -43,13 +48,12 @@ public class DateAttendanceInteractor {
                 textView = new TextView(dateAttendanceActivity);
                 GradientDrawable gd = new GradientDrawable();
                 gd.setStroke(2, R.color.black);
-                tableLayout.setBackground(gd);
-                textView.setBackground(gd);
 
+                textView.setBackground(gd);
                 textView.setTextSize((float) 20);
                 textView.setTextColor(R.color.black);
-
                 textView.setPadding(10, 10, 10, 10);
+
                 switch (j) {
                     case 1:
                         textView.setText("ID");

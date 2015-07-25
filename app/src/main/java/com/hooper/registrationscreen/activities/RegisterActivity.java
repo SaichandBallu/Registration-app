@@ -13,7 +13,6 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -45,9 +44,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener
 
     @InjectView(R.id.dateTextView)
     TextView dateText;
-
-    @InjectView(R.id.progress)
-    ProgressBar progressBar;
 
     @InjectView(R.id.addMember)
     Button add;
@@ -293,12 +289,13 @@ public class RegisterActivity extends Activity implements View.OnClickListener
         startActivity(dateAttendanceIntent);
     }
 
+    /*
     public void showProgress() {
         progressBar.setVisibility(View.VISIBLE);
     }
 
-     public void hideProgress() {
+    public void hideProgress() {
         progressBar.setVisibility(View.GONE);
     }
-
+    */
 }

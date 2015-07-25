@@ -4,6 +4,19 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="Title">Hooper</string>
+    <string name="date_attendance_screen_name">Date Attendance</string>
+    <string name="hooper_label">Hooper</string>
+    <string name="hr_label">HR</string>
+    <string name="checkin_label">Check In</string>
+    <string name="checkout_label">Check Out</string>
+    <string name="register_label">Register</string>
+    <string name="activity_register_namelabel">Name   :</string>
+    <string name="activity_register_profilename_hint">Profile Name</string>
+    <string name="activity_register_mobile_label">Mobile :</string>
+    <string name="activity_register_label_designation">Designation:</string>
+    <string name="activity_register_label_joiningdate">Joining Date:</string>
+    <string name="activity_register_datepicker_mindate">1-1-1990</string>
+    <string name="activity_register_datepicker_maxdate">31-12-2050</string>
     <string-array name="Designation">
         <item>--select--</item>
         <item>Junior Software Engineer</item>
@@ -11,4 +24,7 @@
         <item>Manager</item>
         <item>HR</item>
     </string-array>
+
+    <integer name="activity_register_edittext_mobile_maxlength">10</integer>
+
 </resources>

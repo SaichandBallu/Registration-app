@@ -9,5 +9,4 @@
         android:id="@+id/designation_listView">
 
     </ListView>
-
 </LinearLayout>

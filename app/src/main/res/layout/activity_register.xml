@@ -9,12 +9,11 @@
     tools:context=".MainActivity"
     android:id="@+id/activity">
 
-
     <android.support.v7.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:elevation="4dp"
+        android:layout_height="@dimen/toolbar_height"
+        android:elevation="@dimen/toolbar_elevation"
         android:background="@color/ColorPrimary">
         <TextView
             android:id="@+id/customTitle"
@@ -22,8 +21,8 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textColor="@color/white"
-            android:text="Register"
-            android:textSize="25dp"/>
+            android:text="@string/register_label"
+            android:textSize="@dimen/textsize25sp"/>
 
     </android.support.v7.widget.Toolbar>
 
@@ -31,18 +30,18 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
             <com.hooper.registrationscreen.circleview.CircularImageView
                 android:id="@+id/profilePictureCircleView"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_marginTop="5dp"
+                android:layout_width="@dimen/activity_register_imageview_width"
+                android:layout_height="@dimen/activity_register_imageview_height"
+                android:layout_marginTop="@dimen/activity_register_imageview_margin_top"
                 android:src="@drawable/ic_launcher"
-                app:siBorderWidth="4dp"
+                app:siBorderWidth="@dimen/activity_register_imageview_border_width"
                 app:siBorderAlpha="0.5"
                 app:siBorderColor="@color/bordercolor"
                 android:alpha="1"
@@ -50,50 +49,49 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/activity_register_layout_height"
                 android:orientation="horizontal"
-                android:layout_marginTop="10dp"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:id="@+id/LinearLayout1">
+                android:layout_marginTop="@dimen/activity_register_layout_margin_top"
+                android:layout_marginLeft="@dimen/activity_register_layout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_layout_margin_right"
+                android:id="@+id/profileNameLayout">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/nameLabel"
-                    android:layout_marginRight="6dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Name   :"
-                    android:textSize="17dp"
+                    android:layout_marginRight="@dimen/activity_register_namelabel_margin_right"
+                    android:layout_marginTop="@dimen/activity_register_namelabel_margin_left"
+                    android:text="@string/activity_register_namelabel"
+                    android:textSize="@dimen/textsize17sp"
                     android:layout_gravity="bottom" />
 
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textPersonName"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="@dimen/activity_register_edittext_profilename_margin_left"
                     android:background="@drawable/img_bg_edit_text"
-                    android:ems="10"
                     android:id="@+id/profileName"
                     android:gravity="center"
-                    android:hint="Profile Name" />
+                    android:hint="@string/activity_register_profilename_hint" />
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/activity_register_layout_height"
                 android:orientation="horizontal"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
-                android:layout_marginTop="5dp"
-                android:id="@+id/LinearLayout2">
+                android:layout_marginLeft="@dimen/activity_register_layout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_layout_margin_right"
+                android:layout_marginTop="@dimen/activity_register_layout_margin_top"
+                android:id="@+id/phoneNumberLayout">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/textView4"
-                    android:layout_marginRight="6dp"
-                    android:layout_marginTop="8dp"
-                    android:text="Mobile :"
-                    android:textSize="17dp"
+                    android:layout_marginRight="@dimen/activity_register_label_mobile_margin_right"
+                    android:layout_marginTop="@dimen/activity_register_label_mobile_margin_top"
+                    android:text="@string/activity_register_mobile_label"
+                    android:textSize="@dimen/textsize17sp"
                     android:layout_gravity="bottom" />
 
                 <EditText
@@ -101,8 +99,8 @@
                     android:layout_height="fill_parent"
                     android:id="@+id/mobileNumber"
                     android:background="@drawable/img_bg_edit_text"
-                    android:layout_marginLeft="8dp"
-                    android:maxLength="10"
+                    android:layout_marginLeft="@dimen/activity_register_edittext_mobile_margin_left"
+                    android:maxLength="@integer/activity_register_edittext_mobile_maxlength"
                     android:gravity="center"
                     android:inputType="number"
                     android:hint="Phone Number"/>
@@ -110,74 +108,74 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="45dp"
+                android:layout_height="@dimen/activity_register_layout_height"
                 android:id="@+id/LinearLayout3"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp">
+                android:layout_marginLeft="@dimen/activity_register_layout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_layout_margin_right">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/designationLabel"
-                    android:layout_marginTop="15dp"
-                    android:text="Designation:"
-                    android:textSize="17dp"
-                    android:layout_marginRight="5dp"/>
+                    android:layout_marginTop="@dimen/activity_register_label_designation_margin_top"
+                    android:layout_marginRight="@dimen/activity_register_label_designation_margin_right"
+                    android:text="@string/activity_register_label_designation"
+                    android:textSize="@dimen/textsize17sp"/>
 
                 <Spinner
                     android:id="@+id/designationSpinner"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginLeft="@dimen/activity_register_spinner_margin_left"
                     android:popupBackground="@color/white"/>
             </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="35dp"
+                android:layout_height="@dimen/activity_register_joiningdate_layout_height"
                 android:id="@+id/LinearLayout4"
                 android:orientation="horizontal"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp">
+                android:layout_marginLeft="@dimen/activity_register_layout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_layout_margin_right">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/joiningDateLabel"
-                    android:text="Joining Date:"
-                    android:layout_marginRight="5dp"
+                    android:text="@string/activity_register_label_joiningdate"
+                    android:layout_marginRight="@dimen/activity_register_label_joiningdate_margin_right"
                     android:textSize="17dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:id="@+id/dateTextView"
-                    android:layout_marginLeft="5dp"
-                    android:textSize="17dp"/>
+                    android:layout_marginLeft="@dimen/activity_register_textview_joiningdate_margin_left"
+                    android:textSize="@dimen/textsize17sp"/>
             </LinearLayout>
 
             <DatePicker
                 android:id="@+id/joiningDatePicker"
                 android:layout_width="match_parent"
-                android:layout_height="143dp"
+                android:layout_height="@dimen/activity_register_datepicker_height"
                 android:background="@drawable/img_bg_edit_text"
                 android:datePickerMode="spinner"
-                android:minDate="1-1-1990"
-                android:maxDate="31-12-2050"
-                android:layout_marginLeft="50dp"
-                android:layout_marginRight="50dp"
+                android:minDate="@string/activity_register_datepicker_mindate"
+                android:maxDate="@string/activity_register_datepicker_maxdate"
+                android:layout_marginLeft="@dimen/activity_register_layout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_layout_margin_right"
                 android:calendarViewShown="false" />
 
             <LinearLayout
                 android:layout_width="fill_parent"
-                android:layout_height="40dp"
+                android:layout_height="@dimen/activity_register_buttonLayout_height"
                 android:orientation="horizontal"
-                android:id="@+id/LinearLayout5"
+                android:id="@+id/buttonLayout"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginLeft="70dp"
-                android:layout_marginRight="70dp"
-                android:layout_marginBottom="2dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginLeft="@dimen/activity_register_buttonLayout_margin_left"
+                android:layout_marginRight="@dimen/activity_register_buttonLayout_margin_right"
+                android:layout_marginBottom="@dimen/activity_register_buttonLayout_margin_bottom"
+                android:layout_marginTop="@dimen/activity_register_buttonLayout_margin_top"
                 android:layout_centerHorizontal="true"
                 android:layout_gravity="center_horizontal">
 
@@ -186,30 +184,21 @@
                     android:layout_height="fill_parent"
                     android:background="@drawable/button_style"
                     android:textColor="@color/white"
-                    android:layout_marginRight="6dp"
+                    android:layout_marginRight="@dimen/activity_register_button_add_margin_right"
                     android:id="@+id/addMember"
                     android:text="Add"
-                    android:layout_weight="0.10" />
+                    android:layout_weight="0.1" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
                     android:background="@drawable/button_style"
-                    android:layout_marginLeft="6dp"
+                    android:layout_marginLeft="@dimen/activity_register_button_cancel_margin_left"
                     android:id="@+id/cancelRegister"
                     android:textColor="@color/white"
                     android:text="Back"
-                    android:layout_weight="0.10" />
+                    android:layout_weight="0.1" />
             </LinearLayout>
-                <ProgressBar
-                    android:id="@+id/progress"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="8dp"
-                    android:visibility="gone"
-                    />
         </LinearLayout>
-
     </ScrollView>
-
 </LinearLayout>
